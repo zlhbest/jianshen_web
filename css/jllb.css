@@ -1,0 +1,390 @@
+body{
+	background-color: #0d0f2c;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*侧栏样式开始*/
+.sideBar{
+	position: fixed;
+	top: 90px;
+	right: 0;
+	
+}
+.search {
+	display: flex;
+	border: 1px solid black;
+	justify-content: flex-end;
+	border-radius: 5px 0 0 5px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.search input{
+	width: 0;
+	height: 40px;
+	border: none;
+	outline: none;
+	padding: 0;
+	line-height: 40px;
+	display: block;
+	box-sizing: border-box;
+	transition: all 300ms;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+.search:hover input{
+	width: 200px;
+	padding: 0 15px;
+
+}
+.search button{
+	outline: none;
+	width: 50px;
+	display: block;
+	height: 40px;
+	background-color: rgba(0,0,0,0.8);
+	border: none;
+}
+.search:hover button{
+	background-color: rgba(0,0,0,1);
+}
+.search button:hover i{
+	transform: scale(1.1);
+}
+
+.barlist{
+	position: absolute;
+	top: 46px;
+	right: 0;
+	width: 50px;
+	list-style: none;
+	
+}
+.barlist li{
+	width: 50px;
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+	line-height: 21px;
+	padding: 10px 0;
+	transition: all 800ms;
+}
+.barlist a{
+	text-decoration: none;
+	color: white;
+}
+.barlist li:hover{
+	background-color: #376c7b;
+}
+
+/*头部样式开始*/
+.subject{
+	padding-top: 90px;
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.subject-left{
+	width: 280px;
+	background-color: #26284c;
+	color: white;
+	font-family: "微软雅黑";
+}
+.subject-left>p{
+	font-size: 20px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	background-color: #1a446c;
+	
+}
+.subject-left button{
+	padding: 10px 0;
+	background-color: #2faf89;
+	color:white;
+	border:none;
+	width: 100%;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.subject-left  button:hover {
+	background-color: #16a87d;
+}
+
+.choose_jl{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+}
+.choose_jl>p{
+	text-align: center;
+	font-size: 18px;
+	margin: 20px 0;
+}
+.jlflexbox {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	background-color: #1a446c;
+	border-radius: 5px;
+	padding: 10px;
+}
+.jlflexbox>p{
+	width: 30%;
+	text-align: right;
+	line-height: 40px;
+}
+.jlflexbox>.item{
+	padding-left: 20px;
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.jlflexbox>.item label{
+	width: 50%;
+	display: inline-block;
+	line-height: 40px;
+}
+#price>.item label{
+	width: 100%;
+	display: inline-block;
+}
+
+
+.subject-right{
+	padding-left: 20px;
+	width: 900px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.subject-right-top{
+	width: 900px;
+	height: 375px;
+}
+.subject-right-bottom{
+	margin-top: 30px;
+	width: 900px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom-item:first-of-type{
+	background: url(../img/ad1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+.bottom-item:nth-last-of-type(2){
+	background: url(../img/ad2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+.bottom-item:last-of-type{
+	background: url(../img/ad3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+.bottom-item{
+	width: 280px;
+	height:175px;
+}
+/*教练列表样式开始*/
+
+.qianyue{
+	box-sizing: border-box;
+	width: 1200px;
+	padding: 15px;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: white;
+	font-family: "微软雅黑";
+	background-color: #26284c;
+	border-radius: 10px;
+	
+}
+.qianyue>h3{
+	width: 200%;
+	font-size: 20px;
+}
+.jiaolian {
+	width: 220px;
+	background-color: royalblue;
+	text-align: center;
+	padding-bottom: 15px;
+	margin-top: 30px;
+	background-color: #0d0f2c;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.jiaolian img{
+	filter: brightness(80%);
+	width: 220px;
+}
+.jiaolian:hover{
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.jiaolian:hover img{
+	filter: brightness(100%);
+}
+.jiaolian P{
+	text-align: left;
+	font-size: 16px;
+	line-height: 30px;
+	padding: 0 20px;
+}
+.jiaolian P:first-of-type{
+	font-size: 20px
+}
+.qianyue ul{
+	list-style: none;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	margin: 20px auto 0;
+}
+.qianyue ul li{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #2faf89;
+	border: 1px solid rgba #5ab7a7;
+	font-size: 14px;
+	cursor: pointer;
+}
+.qianyue ul li:first-of-type{
+	margin-right: 4px;
+	border-radius: 6px 0 0 6px;
+}
+.qianyue ul li:last-of-type{
+	margin-left: 4px;
+	border-radius:  0 6px 6px 0;
+}
+.qianyue ul li:hover{
+	filter: brightness(90%);
+}
+
+
+/*banner样式开始*/
+.subject-right-top{
+	overflow: hidden;
+	display: flex;
+}
+.item-cover {
+	position: relative;
+	width: 18%;
+	overflow: hidden;
+	box-sizing: border-box;
+	transition: width 600ms;
+}
+
+.item-cover:nth-of-type(4) {
+	width: 46%;
+}
+
+.item-content {
+	width:414px;
+	height:375px;
+	position: relative;
+}
+
+.item-content img {
+	width: 414px;
+	height: 450px;
+}
+
+.item-cover:first-of-type .item-content:after {
+	content: "";
+	display: block;
+	height: 66px;
+	width: 100px;
+	position: absolute;
+	top: 30px;
+	left: 60px;
+	background: url(../img/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.item-content .order {
+	display: block;
+	width: 246px;
+	height: 60px;
+	position: absolute;
+	bottom: 50px;
+	left: 35%;
+}
+
+.order button {
+	width: 100px;
+	height: 50px;
+	background-color: rgba(50, 37, 18, 0.7);
+	border: none;
+	font-size: 18px;
+	position: relative;
+	margin-left: 20px;
+	outline: none;
+}
+
+.order button:first-of-type:after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: 50px solid rgba(50, 37, 18, 0.7);
+	border-right: 20px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 0px solid transparent;
+	top: 0;
+	right: -20px;
+}
+
+.order button:last-child {
+	top: 20px;
+	background-color: rgba(46, 45, 60, 0.7);
+}
+
+.order button:last-of-type:before {
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 50px solid rgba(46, 45, 60, 0.7);
+	border-left: 20px solid transparent;
+	top: 0;
+	left: -20px;
+}
+
+.order button a {
+	color: white;
+}
+
+.order button:hover {
+	background-color: rgba(50, 37, 18, 0.9);
+}
+
+.order button:hover:after {
+	border-top: 50px solid rgba(50, 37, 18, 0.9);
+}
+
+.order button:last-child:hover {
+	background-color: rgba(46, 45, 60, 0.9);
+}
+
+.order button:last-child:hover:before {
+	border-bottom: 50px solid rgba(46, 45, 60, 0.9);
+}

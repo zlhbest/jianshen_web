@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>酷！教练 | 网约教练，精彩不断~</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="css/magnific-popup.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/magnific-popup.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.white-popup {
+			  display: block;
+			  position: relative;
+			  background: #FFF;
+			  width: 800px;
+			  height: 450px;
+			  margin: 20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!--导航栏开始-->
+		<div class="navBar">
+			<div class="whenPc">
+				<ul class="center-block">
+					<li>
+						<a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+			<div class="whenPhone">
+				<div class="menuBar">
+					<span class="toggle"><i class="fa fa-angle-down"></i></span>
+					<img src="img/logo.png" height="40px" style="margin-top: 10px;" />
+					<span>酷！教练</span>
+				</div>
+				<ul id="menu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--导航栏结束-->
+		<!--首页视频开始-->
+		<div class="welcome">
+			<div class="whenPc">
+				<video width="100%" height="auto" autoplay="autoplay" loop="loop" muted>
+					<source src="video/5s.mp4" type="video/mp4"></source>
+				</video>
+			</div>
+			<div class="whenPhone">
+				<img src="img/welcome.jpg" />
+			</div>
+		</div>
+		<!--wlcome占位区-->
+		<div class="zhanwei">
+			<div class="welcome-text">
+				<img src="img/welcomeText.png" />
+				<a><img src="img/down.png" /></a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function setHeight() {
+				var zhanweih = $(".welcome video").height();
+				if($(window).width() <= 1000) {
+					zhanweih = $(".welcome img").height();
+				}
+				$(".zhanwei").height(zhanweih);
+				$(".welcome-text").height(zhanweih);
+				$(".welcome").height(zhanweih);
+			}
+			setHeight();
+		</script>
+		<!--首页视频结束-->
+		<a name="banner">
+			<!--锚点-->
+		</a>
+		<div class="bodywrapper">
+			<!--banner开始-->
+			<div class="mainWraper-black">
+				<h3 class="banner-title"><img src="img/qianyuejiaolian.png"/></h3>
+				<div class="banner main">
+					<div class="item-cover">
+						<div class="item-content">
+							<img src="img/banner1.png" />
+							<div class="order">
+								<button><a href="#">个人预约</a></button>
+								<button><a href="#">组团预约</a></button>
+							</div>
+						</div>
+					</div>
+					<div class="item-cover">
+						<div class="item-content">
+							<img src="img/banner2.png" />
+							<div class="order">
+								<button><a href="#">个人预约</a></button>
+								<button><a href="#">组团预约</a></button>
+							</div>
+						</div>
+					</div>
+					<div class="item-cover">
+						<div class="item-content">
+							<img src="img/banner3.png" />
+							<div class="order">
+								<button><a href="#">个人预约</a></button>
+								<button><a href="#">组团预约</a></button>
+							</div>
+						</div>
+					</div>
+					<div class="item-cover">
+						<div class="item-content">
+							<img src="img/banner4.png" />
+							<div class="order">
+								<button><a href="#">个人预约</a></button>
+								<button><a href="#">组团预约</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--banner结束-->
+			<!--签约教练开始-->
+			<div class="bgchange">
+				<div class="previous"><i class="fa fa-angle-left"></i></div>
+				<div class="next"><i class="fa fa-angle-right"></i></div>
+				<div class="coachContainner">
+					<div class="coachContainner-head">
+						<img src="img/mingxingjiaolian.png" />
+					</div>
+					<div class="flexbox">
+						<div class="scrollbar">
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_1.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家cettic運動營養師案</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_2.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_3.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Catherine</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Catherine</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_4.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Harley</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Harley</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_5.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_6.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Eden</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Eden</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_7.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家职业专业证书，擅长瑜伽</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_8.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Catherine</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家专业证书</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Catherine</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_9.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--签约教练结束-->
+			<!--饮食营养开始-->
+			<div class="food">
+				<ul>
+					<li>
+						<a href="#"><img src="img/img_food_1.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_2.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_3.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_4.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_5.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_6.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_7.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_8.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_9.png" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/img_food_1.png" /></a>
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				function setLiHeight() {
+					$(".food li").height($(".food li").width());
+				}
+				setLiHeight();
+			</script>
+			<!--饮食营养结束-->
+			<!--私人教练开始-->
+			<div class="bgchange">
+				<div class="previous"><i class="fa fa-angle-left"></i></div>
+				<div class="next"><i class="fa fa-angle-right"></i></div>
+				<div class="coachContainner">
+					<div class="coachContainner-head">
+						<img src="img/grjl.png" />
+					</div>
+					<div class="flexbox">
+						<div class="scrollbar">
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_10.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家专业证书</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_11.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Oliver</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Oliver</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_12.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家专业证书</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_13.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Alice</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_14.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Jenson</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Jenson</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_15.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Eden</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Eden</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_16.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家专业证书</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Kate</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_17.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">&nbsp;</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="coach-item">
+								<div class="skewWraperPos45">
+									<div class="skewWraperNat45">
+										<div class="coach-photo">
+											<img src="img/coach_18.gif" />
+										</div>
+										<div class="coach-hover skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+												<p class="coach-advice">国家专业证书</p>
+											</div>
+										</div>
+										<div class="coach-description skewWraperPos45">
+											<div class="skewWraperNat45">
+												<p class="coach-name">Name</p>
+												<p class="coach-class">高级教练</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--私人教练结束-->
+			<!--视频教学开始-->
+			<div class="video">
+				<div class="coachContainner-head">
+						<img src="img/jssp.png" />
+				</div>
+				<div class="videocontainer flexbox main">
+					<div class="video-item">
+						<div class="video-fengmian">
+							<img src="img/video1.jpg" alt="" />
+							<a  href="#test-popup" class="open-popup-link">
+								<i class="fa fa-play-circle-o"></i>
+							</a>
+						</div>
+						<h4 class="video-title"><a href="">O型腿自我改善</a></h4>
+						<p class="video-des">2课程</p>
+					</div>
+					<div class="video-item">
+						<div class="video-fengmian">
+							<img src="img/video2.jpg" alt="" />
+							<a  href="#test-popup" class="open-popup-link">
+								<i class="fa fa-play-circle-o"></i>
+							</a>
+						</div>
+						<h4 class="video-title"><a href="">邹市明拳击燃脂挑战</a></h4>
+						<p class="video-des">2课程</p>
+					</div>
+					<div class="video-item">
+						<div class="video-fengmian">
+							<img src="img/video3.jpg" alt="" />
+							<a  href="#test-popup" class="open-popup-link">
+								<i class="fa fa-play-circle-o"></i>
+							</a>
+						</div>
+						<h4 class="video-title"><a href="">腹肌撕裂着强化</a></h4>
+						<p class="video-des">10课程</p>
+					</div>
+					<div class="video-item">
+						<div class="video-fengmian">
+							<img src="img/video4.jpg" alt="" />
+							<a  href="#test-popup" class="open-popup-link">
+								<i class="fa fa-play-circle-o"></i>
+							</a>
+						</div>
+						<h4 class="video-title"><a href="">塑形操·臀腿训练</a></h4>
+						<p class="video-des">11课程</p>
+					</div>
+				</div>
+			</div>
+			<!--视频教学结束-->
+			<div id="test-popup" class="white-popup mfp-hide">
+ 					 Popup content
+			</div>
+			<!--footer开始-->
+			<div class="footerWraper">
+				<div class="footer main">
+					<p>Copyright©2017 NewWeber </p>
+					<p>Designed By LiAng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made By ZhangYu/ZhuLonghao /ShanShan</p>
+				</div>
+			</div>
+			<!--footer结束-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		//banner收缩控制
+		$(document).ready(function() {
+			$('.open-popup-link').magnificPopup({
+			   items: {
+				      src: '<video width="300" height="100" controls class="white-popup"><source src="video/video.mp4" type="video/mp4" ></source></video>',
+				      type: 'inline'
+				  },
+				  closeBtnInside:true
+			});
+			//<video width="800" height="450" controls class="white-popup"><source src="video/video.mp4" type="video/mp4" ></source></video>
+			//随时调整占位框大小
+			$(window).resize(function() {
+				setHeight();
+				setLiHeight();
+			})
+			//手机菜单栏控制
+			var isHidden = true;
+			$(".toggle").click(function() {
+				$("#menu").slideToggle("slow");
+				isHidden = !isHidden;
+				var classNode = $(this).children();
+				classNode.removeClass();
+				if(isHidden) {
+					classNode.addClass("fa fa-angle-down");
+				} else {
+					classNode.addClass("fa fa-angle-up");
+				}
+			});
+			//banner收缩控制
+			$(".item-cover").mouseenter(function() {
+				$(".item-cover").not(this).css("width", "18%");
+				$(this).css("width", "46%");
+			})
+
+			//滚动条
+			var location = 0;
+			var scrollbarwith = $(".scrollbar").width() - $(".coachContainner>.flexbox").width();
+			$(".previous").click(function() {
+				if($(".next").is(":hidden")) {
+					$(".next").show();
+				}
+				if((location += 654) >= scrollbarwith) {
+					location = scrollbarwith;
+					$(".previous").hide();
+				}
+				$(".scrollbar").css("transform", "translateX(" + location + "px)");
+			})
+
+			$(".next").click(function() {
+				if($(".previous").is(":hidden")) {
+					$(".previous").show();
+				}
+				if((location -= 654) <= 0) {
+					location = 0;
+					$(".next").hide();
+				}
+				$(".scrollbar").css("transform", "translateX(" + location + "px)");
+			})
+			
+			//为页面添加链接 仅供演示时使用
+			$(".order a").attr('href','yyfirst.html');
+			$(".coach-item").click(function(){
+			window.location.href="jlxq.html";
+			});
+
+		})
+		$('.welcome-text a').click(function() {
+			$('html,body').animate({
+				scrollTop: $('a[name=banner]').offset().top
+			}, 1000);
+		});
+	</script>
+</html>

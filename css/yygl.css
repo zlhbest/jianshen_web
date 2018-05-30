@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "微软雅黑";
+}
+h3 {
+	font-size: 24px;
+	line-height: 60px;
+	
+}
+ .yygl {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ .yygl li {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+ .yygl li p {
+	width: 50%;
+	line-height: 30px;
+}
+
+ .btn-group {
+	margin-top: 20px;
+}
+
+ .btn-group button {
+	background-color: #5ab7a7;
+	padding: 5px 20px;
+	border: none;
+	color: white;
+	border-radius: 6px;
+}
+
+ .btn-group button:nth-of-type(2) {
+	background-color: green;
+}
+
+ .btn-group button:last-of-type {
+	background-color: red;
+}
+
+ .btn-group button:hover {
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4) inset;
+}
+
+@media only screen and (max-width: 768px) {
+	 .yygl li p {
+		width: 100%;
+		line-height: 30px;
+	}
+}

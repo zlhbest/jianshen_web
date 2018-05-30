@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>登陆-酷！教练</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--导航栏开始-->
+		<div class="navBar">
+			<div class="whenPc">
+				<ul class="center-block">
+					<li>
+						<a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+			<div class="whenPhone">
+				<div class="menuBar">
+					<span class="toggle"><i class="fa fa-angle-down"></i></span>
+					<img src="img/logo.png" height="40px" style="margin-top: 10px;" />
+					<span>酷！教练</span>
+				</div>
+				<ul id="menu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--导航栏结束-->
+		<!--登录框开始-->
+		<div class="container">
+			<div class="windowwraper">
+				<div class="windowMenubar">
+					<a href="#" id="login" class="aOnchose">登陆</a>
+					<a href="#" id="register">注册</a>
+				</div>
+				<div class="login">
+					<form action="javascript:()" method="post">
+						<input type="text" name="user" id="user" value="" class="input-text" placeholder="用户名/邮箱/手机号" AUTOCOMPLETE="off" />
+						<input type="password" name="password" id="password" value="" class="input-text" placeholder="密码" />
+						<div class="radiogroup">
+							<label class="status"><i class="fa fa-circle-o"><input type="radio" name="status" id="statusperson" value="person" checked="checked"/></i>&nbsp;&nbsp;个人</label>
+							<!--换
+							行--><label class="status"><i class="fa fa-circle"><input type="radio" name="status" id="statustrain" value="train" /></i>&nbsp;&nbsp;教练</label>
+						</div>
+						<input type="submit" value="登陆" onclick="location='grzy.html'"/>
+					</form>
+					<div class="otherway">
+						其他方式登陆：
+						<a href="#"><i class="fa fa-qq"></i></a>
+						<a href="#" style="margin-left: 20px;"><i class="fa fa-weibo"></i></a>
+					</div>
+				</div>
+				<div class="register">
+					<form action="javascript:()" method="post">
+						<input type="text" name="username" id="username" value="" class="input-text" placeholder="用户名" AUTOCOMPLETE="off"  />
+						<input type="email" name="email" id="email" value="" class="input-text" placeholder="邮箱" />
+						<input type="tel" name="tel" id="tel" value="" class="input-text" placeholder="手机号" />
+						<input type="password" name="password" id="password" value="" class="input-text" placeholder="密码" />
+						<div class="flexBox">
+							<div class="radiogroup">
+								<span>性别：</span><label class="sex"><i class="fa fa-circle-o"><input type="radio" name="sex" id="sexman" value="man" checked="checked"/></i>&nbsp;&nbsp;男&nbsp&nbsp&nbsp</label>
+								<!--换
+								行--><label class="sex"><i class="fa fa-circle"><input type="radio" name="sex" id="sexwoman" value="wonman" /></i>&nbsp;&nbsp;女&nbsp&nbsp&nbsp</label>
+							</div>
+							<div class="radiogroup">
+								<span>身份：</span><label class="status"><i class="fa fa-circle-o"><input type="radio" name="status" id="statusperson" value="person" checked="checked"/></i>&nbsp;&nbsp;个人</label>
+								<!--换
+							行--><label class="status"><i class="fa fa-circle"><input type="radio" name="status" id="statustrain" value="train" /></i>&nbsp;&nbsp;教练</label>
+							</div>
+						</div>
+						<input type="submit" value="注册" onclick="location='jlzy.html'"/>
+					</form>
+				</div>
+			</div>
+			<!--footer开始-->
+		</div>
+		<div class="footerWraper">
+				<div class="footer main">
+					<p>Copyright©2017 NewWeber </p>
+					<p>Designed By LiAng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made By ZhangYu/ZhuLonghao /ShanShan</p>
+				</div>
+			</div>
+			<!--footer结束-->
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var isHidden = true;
+			$(".toggle").click(function() {
+				$("#menu").slideToggle("slow");
+				isHidden = !isHidden;
+				var classNode = $(this).children();
+				classNode.removeClass();
+				if(isHidden) {
+					classNode.addClass("icon-chevron-down");
+				} else {
+					classNode.addClass("icon-chevron-up");
+				}
+			});
+
+			$("#login").click(function() {
+				$(this).addClass("aOnchose");
+				$("#register").removeClass("aOnchose");
+				$(".register").hide();
+				if($(".login").is(":hidden")) {
+					$(".login").show();
+				}
+			})
+
+			$("#register").click(function() {
+				$(this).addClass("aOnchose");
+				$("#login").removeClass("aOnchose");
+				$(".login").hide();
+				if($(".register").is(":hidden")) {
+					$(".register").show();
+				}
+			})
+			$(".login label").click(function() {
+				var node1 = $(".login #statusperson");
+				var node2 = $(".login #statustrain")
+				radioChecked(node1, node2);
+			})
+
+			$(".register label.sex").click(function() {
+				var node1 = $(".register #sexwoman");
+				var node2 = $(".register #sexman")
+				radioChecked(node1, node2);
+			})
+			$(".register label.status").click(function() {
+
+				var node1 = $(".register #statusperson");
+				var node2 = $(".register #statustrain")
+				radioChecked(node1, node2);
+			})
+
+		})
+
+		function radioChecked(x, y) {
+			if(x.is(":checked")) {
+				x.parent().removeClass("fa fa-circle").addClass("fa fa-circle-o");
+				y.parent().removeClass("fa fa-circle-o").addClass("fa fa-circle");
+			} else {
+				y.parent().removeClass("fa fa-circle").addClass("fa fa-circle-o");
+				x.parent().removeClass("fa fa-circle-o").addClass("fa fa-circle");
+			}
+		}
+	</script>
+</html>

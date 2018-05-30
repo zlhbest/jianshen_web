@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浏览器定位</title>
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=94688d13b425bf178d758f86878a0509"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style type="text/css">
+			.info {
+				width: 100px;
+				height: 150px;
+				background-color: #0d0f2c;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			div.info-top {
+				position: relative;
+				background: none repeat scroll 0 0 #F9F9F9;
+				border-radius: 5px 5px 0 0;
+			}
+			div.info-top div {
+				display: inline-block;
+				color: #333333;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 31px;
+				padding: 0 10px;
+			}
+			
+			
+			
+			div.info-middle {
+				height: 100%;
+				font-size: 16px;
+				line-height: 20px;
+			}
+			
+			div.info-bottom {
+				height: 0px;
+				width: 100%;
+				clear: both;
+				text-align: center;
+			}
+			
+			div.info-bottom img {
+				position: relative;
+				z-index: 104;
+			}
+			
+			span {
+				margin-left: 5px;
+				font-size: 11px;
+			}
+			
+			.info-middle img {
+				float: left;
+				margin-right: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='container'></div>
+		<div id="tip"></div>
+		<div id="myPageTop" style="display: none;">
+			<table>
+				<tr>
+					<td>
+						<label>请输入您搜索的范围：</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="tipinput" value="1000" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div></div>
+		<script type="text/javascript">
+			var map, geolocation;
+			//加载地图，调用浏览器定位服务
+
+			map = new AMap.Map('container', {
+				resizeEnable: true,
+				zoom: 15,
+			});
+
+			var lnglats = [ //也可以使用LngLat对象
+				[120.117928, 36.001052],
+				[120.12724, 36.004037],
+				[120.118314, 36.00244],
+				[120.123507, 36.00119]
+			];
+			marker1 = new AMap.Marker({
+				position: lnglats[0],
+				icon: "img/jianshen.png",
+				map: map
+			});
+			//给Marker绑定单击事件
+			marker1.on('mouseover', markerMove1);
+			marker1.on('mouseout', closeInfoWindow);
+			marker1.on('click', markerClick1);
+			marker2 = new AMap.Marker({
+				position: lnglats[1],
+				icon: "img/jianshen.png",
+				map: map
+			});
+			//给Marker绑定单击事件
+			marker2.on('mouseover', markerMove2);
+			marker2.on('mouseout', closeInfoWindow);
+			marker2.on('click', markerClick2);
+			marker3 = new AMap.Marker({
+				position: lnglats[2],
+				icon: "img/jianshen.png",
+				map: map
+			});
+			//给Marker绑定单击事件
+			marker3.on('mouseover', markerMove3);
+			marker3.on('mouseout', closeInfoWindow);
+			marker3.on('click', markerClick3);
+			marker4 = new AMap.Marker({
+				position: lnglats[3],
+				icon: "img/jianshen.png",
+				map: map
+			});
+			
+			//给Marker绑定单击事件
+			marker4.on('mouseover', markerMove4);
+			marker4.on('mouseout', closeInfoWindow);
+			marker4.on('click', markerClick4);
+
+			function markerClick1(e) {
+				window.open("jlxq.html");
+			}
+
+			function markerMove1(e) {
+				infoWindow.open(map, marker1.getPosition());
+			}
+
+			function markerClick2(e) {
+				window.open("jlxq.html");
+			}
+
+			function markerMove2(e) {
+				infoWindow.open(map, marker2.getPosition());
+			}
+
+			function markerClick3(e) {
+				window.open("jlxq.html");
+			}
+
+			function markerMove3(e) {
+				infoWindow.open(map, marker3.getPosition());
+			}
+
+			function markerClick4(e) {
+				window.open("jlxq.html");
+			}
+
+			function markerMove4(e) {
+				infoWindow.open(map, marker4.getPosition());
+			}
+			//定位
+			map.plugin('AMap.Geolocation', function() {
+				geolocation = new AMap.Geolocation({
+					enableHighAccuracy: true, //是否使用高精度定位，默认:true
+					timeout: 10000, //超过10秒后停止定位，默认：无穷大
+					buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+					zoomToAccuracy: false, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+					buttonPosition: 'RB'
+				});
+				map.addControl(geolocation);
+				geolocation.getCurrentPosition();
+				AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
+				AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
+			});
+			//解析定位结果
+			function onComplete(data) {
+				var a = document.getElementById("tipinput").value;
+				if(a == null) {
+					alert("请输入范围")
+				} else {
+					var circle = new AMap.Circle({
+						center: new AMap.LngLat(data.position.getLng(), data.position.getLat()), // 圆心位置
+						radius: a, //半径
+						strokeColor: "#F33", //线颜色
+						strokeOpacity: 1, //线透明度
+						strokeWeight: 3, //线粗细度
+						fillColor: "#ee2200", //填充颜色
+						fillOpacity: 0.35 //填充透明度
+					});
+				}
+				circle.setMap(map);
+
+			}
+			//解析定位错误信息
+			function onError(data) {
+				document.getElementById('tip').innerHTML = '定位失败';
+			}
+			//实例化信息窗体
+			var title = '',
+				content = [];
+			content.push("<img src='img/lll.png' width='100%' height='100%'>");
+			var infoWindow = new AMap.InfoWindow({
+				isCustom: true, //使用自定义窗体
+				content: createInfoWindow(title, content.join("<br/>")),
+				offset: new AMap.Pixel(0, -35)
+			});
+
+			//构建自定义信息窗体
+			function createInfoWindow(title, content) {
+				var info = document.createElement("div");
+				info.className = "info";
+
+				//可以通过下面的方式修改自定义窗体的宽高
+				//info.style.width = "400px";
+				// 定义顶部标题
+				var top = document.createElement("div");
+				var titleD = document.createElement("div");
+				var closeX = document.createElement("img");
+				top.className = "info-top";
+				titleD.innerHTML = title;
+				closeX.src = "http://webapi.amap.com/images/close2.gif";
+				closeX.onclick = closeInfoWindow;
+
+				top.appendChild(titleD);
+				top.appendChild(closeX);
+
+				// 定义中部内容
+				var middle = document.createElement("div");
+				middle.className = "info-middle";
+				middle.style.backgroundColor = 'white';
+				middle.innerHTML = content;
+				info.appendChild(middle);
+			
+				return info;
+			}
+
+			//关闭信息窗体
+			function closeInfoWindow() {
+				map.clearInfoWindow();
+			}
+		</script>
+	</body>
+
+</html>

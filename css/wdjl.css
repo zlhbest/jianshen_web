@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "微软雅黑";
+}
+h3 {
+	font-size: 24px;
+	line-height: 60px;
+	
+}
+.train-item {
+	padding: 20px;
+	margin-top: 20px;
+	display: flex;
+	border-top: 1px solid white;
+}
+
+.train-item img {
+	width: 150px;
+	height: 150px;
+}
+
+.train-item .jieshao {
+	padding-left: 30px;
+	line-height: 30px;
+}
+
+.train-item .jieshao h5 {
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+	.train-item .jieshao {
+		padding-left: 0;
+		line-height: 30px;
+	}
+}

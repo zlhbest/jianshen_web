@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>支付成功-酷！教练</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/yylast.css"/>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--导航栏开始-->
+		<div class="navBar">
+			<div class="whenPc">
+				<ul class="center-block">
+					<li>
+						<a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+			<div class="whenPhone">
+				<div class="menuBar">
+					<span class="toggle"><i class="fa fa-angle-down"></i></span>
+					<img src="img/logo.png" height="40px" style="margin-top: 10px;" />
+					<span>酷！教练</span>
+				</div>
+				<ul id="menu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="zhanwei" style="height: 100px;"></div>
+		<!--导航栏结束-->
+		<div class="container">
+			<div class="step"><span>预约课程</span><span>支付页面</span><span>预约成功</span></div>
+			<div class="mesg">
+				<div class="mesg-left">
+					<img src="img/yy.png"/>
+				</div>
+				<div class="mesg-right">
+					<figure>
+						<img src="img/success.png"/>
+						<figcaption>支付成功</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+			<!--footer开始-->
+			<div class="footerWraper">
+				<div class="footer main">
+					<p>Copyright©2017 NewWeber </p>
+					<p>Designed By LiAng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made By ZhangYu/ZhuLonghao /ShanShan</p>
+				</div>
+			</div>
+			<!--footer结束-->		
+	</body>
+	<script type="text/javascript">
+		//banner收缩控制
+		$(document).ready(function() {
+			//手机菜单栏控制
+			var isHidden = true;
+			$(".toggle").click(function() {
+				$("#menu").slideToggle("slow");
+				isHidden = !isHidden;
+				var classNode = $(this).children();
+				classNode.removeClass();
+				if(isHidden) {
+					classNode.addClass("fa fa-angle-down");
+				} else {
+					classNode.addClass("fa fa-angle-up");
+				}
+			});
+		})
+	</script>	
+</html>

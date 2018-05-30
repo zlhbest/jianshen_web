@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "微软雅黑";
+}
+h3 {
+	font-size: 24px;
+	line-height: 60px;
+	
+}
+.yysz {
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	padding: 20px;
+	width: 100%;
+	line-height: 36px;
+}
+
+a {
+	color: white;
+}
+
+.yysz {
+	width: 100%;
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.yysz li {
+	list-style: none;
+}
+
+.yysz button {
+	background-color: #5ab7a7;
+	border: none;
+	padding: 5px 20px;
+	color: white;
+	margin-left: 15px;
+	border-radius: 4px;
+}
+
+.select label {
+	display: inline-block;
+	text-align: right;
+	width: 10%;
+	min-width: 100px;
+	line-height: 30px;
+}
+
+.select select {
+	height: 30px;
+	background-color: #0d0f2c;
+	border: none;
+	color: white;
+	padding: 0 10px;
+	border-radius: 6px;
+}
+
+.input label {
+	width: 10%;
+	min-width: 100px;
+	text-align: right;
+	display: inline-block;
+	line-height: 30px;
+	color: #c8c8c9;
+}
+
+.input input {
+	width: 80%;
+	max-width: 200px;
+	height: 30px;
+	background-color: #0d0f2c;
+	border: none;
+	color: white;
+	padding: 0 10px;
+	border-radius: 6px;
+}
+
+.input input[disabled=disabled] {
+	background-color: #1c1e3b;
+}
+
+.input input[type=date] {
+	width: 100px;
+}
+
+.input input[type=time] {
+	width: 100px;
+}
+
+.yysz li:last-of-type {
+	margin-bottom: 20px;
+}
+
+.yysz label {
+	margin-bottom: 20px;
+}

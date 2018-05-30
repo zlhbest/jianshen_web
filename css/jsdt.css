@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "微软雅黑";
+}
+h3 {
+	font-size: 24px;
+	line-height: 60px;
+	
+}
+.jsdt {
+	width: 100%;
+	list-style: none;
+}
+
+.jsdt li {
+	background-color: red;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.jsdt li p {
+	width: 25%;
+	min-width: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+	 .jsdt li p {
+		width: 50%;
+		line-height: 30px;
+	}
+	 .jsdt li p:first-of-type {
+		width: 100%;
+	}
+}

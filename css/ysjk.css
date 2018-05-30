@@ -1,0 +1,164 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background-color: #0d0f2c;
+	height: 100%;
+	
+}
+.header {
+	background: url(../img/biaoti.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	width: 100%;
+	height: 380px;
+	text-align: center;
+	color:white;
+	font-size: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header h3 {
+	margin-top: -50px;
+	text-shadow:2px 2px 1px #000;
+	font-size: 36px;
+	margin-bottom: 50px;
+	
+}
+
+.header input{
+	border: none;
+	outline: none;
+	height: 40px;
+	vertical-align: bottom;
+}
+.header input[type=text] {
+	width: 300px;
+	font-size: 20px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	background-color: rgba(255,255,255,0.6);
+	
+}
+.header input[type=text]:focus,.header input[type=text]:hover {
+	box-shadow: 0 0 8px 10px rgba(0,0,0,0.1) inset;
+}
+.header button{
+	background-color: #20400d;
+	width: 50px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	border: none;
+	transition: all 200ms;
+	text-shadow: 2px 2px 0.5px #000000;
+}
+.header button:hover {
+	font-size: 20px
+}
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	background-color: #0d0f2c;
+	margin-top: 40px;
+	justify-content: space-between;
+}
+.container .left{
+	width: 300px;
+	background-color: #26284c;
+	border-radius: 6px;
+	height: 780px;
+}
+.container .left ul{
+	list-style: none;
+	padding: 20px 0;
+}
+.container .left ul li{
+	margin-bottom: 20px;
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+	padding-left: 40px;
+	position: relative;
+}
+.container .left .lefbar-content{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: #7376ad;
+	padding: 10px;
+	z-index: 99;
+}
+
+
+.container .left ul li:hover{
+	background-color: #7376ad;
+	cursor: pointer;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.container .left ul li .lefbar-content{
+	display: none;
+	border-radius: 0 6px 6px 0;
+}
+.container .left ul li:hover .lefbar-content{
+	display: block;
+	
+}
+.container .right{
+	width:800px;
+	height: auto;
+}
+.rightitem {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 40px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	border: 2px solid white;
+	position: relative;
+	margin-bottom: 60px;
+}
+.rightitem p{
+	width: 100%;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+.rightitem p:first-of-type{
+	position: absolute;
+	width: 120px;
+	top: -30px;
+	left: 40px;
+	font-size: 28px;
+	color: white;
+	background-color: #0d0f2c;
+	padding: 10px;
+}
+.rightitem img {
+	width: 150px;
+	height: 220px;
+}
+.container .left  .fooditem{
+	display: flex;
+	width: 210px;
+	padding: 10px;
+}
+.container .left  .fooditem:hover{
+	background-color: #26284c;
+}
+
+.container .left  .fooditem img{
+	width: 50px;
+	height: 50px;
+}
+.container .left  .fooditem p{
+	padding-left: 35px;
+}

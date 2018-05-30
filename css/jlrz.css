@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "微软雅黑";
+}
+h3 {
+	font-size: 24px;
+	line-height: 60px;
+	
+}
+.grxx {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grxx h3 {
+	margin-top: 15px;
+}
+
+.jbxx {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	padding: 20px;
+	width: 100%;
+}
+
+.jbxx img {
+	width: 120px;
+	height: 120px;
+}
+
+.jbxx-xx {
+	padding-left: 30px;
+}
+
+.jbxx-xx P {
+	line-height: 36px;
+}
+
+.jbxx-xx P:first-of-type {
+	font-size: 22px;
+	line-height: 40px;
+}
+
+.jbxx-xx P:nth-of-type(2) {
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
+}
+
+.jbxx-xx P span {
+	margin-left: 20px;
+	font-size: 14px
+}
+
+.jbxx .btngroup {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.btngroup button {
+	background-color: #5ab7a7;
+	border: none;
+	padding: 5px 20px;
+	color: white;
+	border-radius: 4px;
+}
+
+a {
+	color: white;
+}
+
+.kzxx {
+	width: 100%;
+	background-color: #1d1f3e;
+	border-radius: 10px;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.kzxx li {
+	list-style: none;
+}
+
+.kzxx li:nth-last-of-type(2) {
+	margin-top: 20px;
+}
+
+.kzxx button {
+	background-color: #5ab7a7;
+	border: none;
+	padding: 5px 20px;
+	color: white;
+	margin-left: 15px;
+	border-radius: 4px;
+}
+
+.select label {
+	display: inline-block;
+	text-align: right;
+	width: 10%;
+	min-width: 100px;
+	line-height: 30px;
+}
+
+.select select {
+	height: 30px;
+	background-color: #0d0f2c;
+	border: none;
+	color: white;
+	padding: 0 10px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.input label {
+	width: 10%;
+	min-width: 100px;
+	text-align: right;
+	display: inline-block;
+	line-height: 30px;
+	color: #c8c8c9;
+	margin-bottom: 20px;
+}
+
+.input input {
+	width: 80%;
+	max-width: 200px;
+	height: 30px;
+	background-color: #0d0f2c;
+	border: none;
+	color: white;
+	padding: 0 10px;
+	border-radius: 6px;
+}
+
+.input input[disabled=disabled] {
+	background-color: #1c1e3b;
+}
+
+.input input[type=file] {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.input span {
+	width: 80%;
+	max-width: 200px;
+	height: 30px;
+	background-color: #0d0f2c;
+	border: none;
+	color: white;
+	padding: 0 10px;
+	border-radius: 6px;
+	display: inline-block;
+	position: relative;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #0d0f2c;
+}
+
+.input span:hover {
+	border: 1px solid skyblue;
+}

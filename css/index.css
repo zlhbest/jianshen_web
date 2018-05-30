@@ -1,0 +1,526 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.skewWraperPos45 {
+	transform: skewX(-45deg);
+	position: absolute;
+}
+
+.skewWraperNat45 {
+	transform: skewX(45deg);
+	position: absolute;
+}
+
+.flexbox {
+	
+	width: 100%;
+	display: flex;
+	
+}
+
+
+/*欢迎开始*/
+
+.welcome {
+	position: fixed;
+	z-index: -100;
+	width: 100%;
+}
+
+.welcome .whenPhone img {
+	width: 100%;
+	z-index: -10;
+}
+
+.zhanwei .welcome-text {
+	z-index: 0;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.zhanwei .welcome-text img {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.zhanwei .welcome-text a {
+	display: block;
+	width: 100%;
+}
+
+.zhanwei .welcome-text>img {
+	width: 700px;
+}
+
+.zhanwei .welcome-text a>img {
+	width: 50px;
+}
+
+.welcome .whenPc {
+	filter: grayscale(90%) blur(4px);
+}
+
+.bodywrapper {
+	position: relative;
+	z-index: 100;
+	padding-top: 60px;
+	background-color: #0d0f2c;
+}
+
+
+/*banner样式开始*/
+
+.banner-title {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+	font-family: "微软雅黑";
+	letter-spacing: 10px;
+}
+
+.banner {
+	overflow: hidden;
+	display: flex;
+	padding-bottom: 80px;
+}
+
+.banner-title img {
+	width: 600px;
+}
+
+.item-cover {
+	position: relative;
+	width: 18%;
+	overflow: hidden;
+	transition: border-bottom 500ms;
+	box-sizing: border-box;
+	transition: width 400ms;
+}
+
+.item-cover:nth-of-type(4) {
+	width: 46%;
+}
+
+.item-content {
+	width: 552px;
+	height: 500px;
+	position: relative;
+}
+
+.item-content img {
+	width: 100%;
+	height: auto;
+}
+
+.item-cover:first-of-type .item-content:after {
+	content: "";
+	display: block;
+	height: 66px;
+	width: 100px;
+	position: absolute;
+	top: 30px;
+	left: 60px;
+	background: url(../img/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.item-content .order {
+	display: block;
+	width: 246px;
+	height: 60px;
+	position: absolute;
+	bottom: 50px;
+	right: 18%;
+}
+
+.order button {
+	width: 100px;
+	height: 50px;
+	background-color: rgba(50, 37, 18, 0.7);
+	border: none;
+	font-size: 18px;
+	position: relative;
+	margin-left: 20px;
+	outline: none;
+}
+
+.order button:first-of-type:after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: 50px solid rgba(50, 37, 18, 0.7);
+	border-right: 20px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 0px solid transparent;
+	top: 0;
+	right: -20px;
+}
+
+.order button:last-child {
+	top: 20px;
+	background-color: rgba(46, 45, 60, 0.7);
+}
+
+.order button:last-of-type:before {
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 50px solid rgba(46, 45, 60, 0.7);
+	border-left: 20px solid transparent;
+	top: 0;
+	left: -20px;
+}
+
+.order button a {
+	color: white;
+}
+
+.order button:hover {
+	background-color: rgba(50, 37, 18, 0.9);
+}
+
+.order button:hover:after {
+	border-top: 50px solid rgba(50, 37, 18, 0.9);
+}
+
+.order button:last-child:hover {
+	background-color: rgba(46, 45, 60, 0.9);
+}
+
+.order button:last-child:hover:before {
+	border-bottom: 50px solid rgba(46, 45, 60, 0.9);
+}
+
+
+/*教练列表*/
+
+.bgchange {
+	width: 100%;
+	background-color: #15183b;
+	position: relative;
+}
+
+.bgchange .previous,
+.next {
+	position: absolute;
+	top: 50%;
+	font-size: 50px;
+	color: white;
+	transition: all 1s;
+	z-index: 1000;
+}
+
+.bgchange .previous:hover,
+.next:hover {
+	transform: scale(1.4);
+	color: #FFD700;
+	cursor: pointer;
+}
+
+.bgchange .previous {
+	left: 30px;
+}
+
+.bgchange .next {
+	right: 30px;
+	display: none;
+}
+
+.coachContainner {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 80px 0;
+	text-align: center;
+}
+
+.coachContainner>.flexbox {
+	max-width: 1200px;
+	overflow: hidden;
+	justify-content: flex-end;
+}
+
+.coachContainner .scrollbar {
+	display: flex;
+	transition: all 1s;
+}
+
+.coachContainner-head {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.coachContainner-head img {
+	width: 600px;
+}
+
+.coach-item {
+	position: relative;
+	width: 220px;
+	height: 400px;
+	overflow: hidden;
+	margin-left: 107px;
+	cursor: pointer;
+}
+
+.coach-item:first-of-type {
+	margin-left: 0;
+}
+
+.coach-item>.skewWraperPos45 {
+	overflow: hidden;
+	top: 0;
+	left: -110px;
+	width: 480px;
+	height: 500px;
+}
+
+.coach-item>.skewWraperPos45>.skewWraperNat45 {
+	top: 0;
+	left: 10px;
+	width: 220px;
+	height: 300px;
+}
+
+.coach-item .coach-photo img {
+	width: 220px;
+	height: 400px;
+}
+
+.coach-item .coach-description {
+	top: 260px;
+	left: -4px;
+	width: 250px;
+	height: 54px;
+	background-color: rgba(37, 30, 45, 0.8);
+	transition: all 500ms;
+}
+
+.coach-item .coach-description .skewWraperNat45 {
+	text-align: left;
+	height: 54px;
+	line-height: 26px;
+	color: white;
+	padding-left: 60px;
+	box-sizing: border-box;
+}
+
+.coach-hover {
+	top: 150px;
+	width: 480px;
+	height: 600px;
+	background-color: rgba(37, 35, 34, 0.3);
+	transition: top 1s;
+}
+
+.coach-item:hover .coach-description {
+	opacity: 0;
+}
+
+.coach-item:hover .coach-hover {
+	top: -160px;
+}
+
+.coach-hover .skewWraperNat45 {
+	left: 160px;
+	top: 400px;
+	width: 220px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	text-align: right;
+	line-height: 22px;
+}
+
+.coach-hover .skewWraperNat45 p {
+	color: white;
+	position: relative;
+	left: -220px;
+	margin-bottom: 10px;
+	transition: left 1s;
+}
+
+.coach-item:hover .coach-hover p {
+	left: 0;
+}
+
+
+/*饮食营养*/
+
+.food {
+	display: flex;
+	color: white;
+}
+
+.food h3 {
+	width: 20%;
+}
+
+.food ul {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	padding: 40px 0;
+}
+
+.food ul li {
+	display: block;
+	width: 10%;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.food ul li img {
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+}
+
+@media screen and (max-width:800px) {
+	.food ul li {
+		display: block;
+		width: 20%;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+.food ul li:hover img {
+	transform: scale(1.1);
+}
+
+
+/*.food ul li:after{
+	overflow: hidden;
+	top: -16%;
+	left: -16%;
+	box-sizing: border-box;
+	font-size: 30px;
+	content: "";
+	display: block;
+	position: absolute;
+	width: 130%;
+	height:130%;
+	border-radius: 50%;
+	transform: scale(0);
+	transform-origin: 50% 50%;
+	transition: all 1s;
+	text-align: center;
+	background-color: rgba(40,199,77,0.2);
+	cursor: pointer;
+}
+.food ul li:hover:after{
+	transform: scale(1);
+}*/
+
+
+/*视频开始*/
+
+.video {
+	padding: 60px 0 60px;
+	overflow: hidden;
+}
+
+.videocontainer {
+	justify-content: space-between;
+}
+
+.video>h3 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	margin-bottom: 40px;
+	position: relative;
+}
+.video>h3>span{
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	right:calc(50% - 120px);
+}
+.video-item {
+	width: 24%;
+	padding-bottom: 20px;
+	background-color: rgba(0,0,0,0.4);
+	text-align: center;
+	position: relative;
+	transition: transform 300ms linear;
+}
+.video-item:hover {
+	box-shadow: 0 15px 30px rgba(255, 235, 59, 0.2);
+	transform: translateY(-4px);
+}
+
+.video-item i {
+	font-size: 40px;
+	color: white;
+	position: absolute;
+	bottom: 90px;
+	left: 10px;
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+.video-item i:hover {
+	color: #4fba6f;
+	transform: scale(1.1);
+}
+
+.video-item img {
+	width: 100%;
+}
+
+.video-item .video-title a {
+	font-weight: 600;
+	font-size: 18px;
+	color: white;
+	line-height: 40px;
+}
+
+.video-item .video-des {
+	font-size: 16px;
+	color: white;
+	line-height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+	.videocontainer {
+		flex-wrap: wrap;
+	}
+	.video-item {
+		width: 48%;
+		margin: 5px 1%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.welcome .whenPc {
+		display: none;
+	}
+	.welcome .whenPhone {
+		display: block;
+	}
+	.zhanwei .welcome-text>img {
+		width: 200px;
+	}
+	.zhanwei .welcome-text a>img {
+		width: 20px;
+	}
+}

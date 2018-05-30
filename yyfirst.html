@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>预约课程-酷！教练</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/yyfirst.css"/>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--导航栏开始-->
+		<div class="navBar">
+			<div class="whenPc">
+				<ul class="center-block">
+					<li>
+						<a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+			<div class="whenPhone">
+				<div class="menuBar">
+					<span class="toggle"><i class="fa fa-angle-down"></i></span>
+					<img src="img/logo.png" height="40px" style="margin-top: 10px;" />
+					<span>酷！教练</span>
+				</div>
+				<ul id="menu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="ysjk.html">饮食健康</a>
+					</li>
+					<li>
+						<a href="jllb.html">教练预约</a>
+					</li>
+					<li>
+						<a href="jxsp.html">教学视频</a>
+					</li>
+					<li>
+						<a href="login.html">登陆 | 注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="zhanwei" style="height: 100px;"></div>
+		<!--导航栏结束-->
+		<div class="container">
+			<div class="step"><span>预约课程</span><span>支付页面</span><span>预约成功</span></div>
+			<div class="mesg">
+				<div class="mesg-left">
+					<img src="img/yy.png"/>
+				</div>
+				<div class="mesg-right">
+					<p>预约教练:<span>Nick</span></p>
+					<p>预约课程:
+						<select name="">
+						<option value="">零基础适应性练习</option>
+						<option value="">健美身材增肌计划</option>
+						</select>
+					</p>
+					<br />
+					<p>预约时间</p>
+					<p>开始时间：<span class="bottom"><input type="date" /><input type="time" /></span></p>
+					<p>结束时间：<span class="bottom"><input type="date" /><input type="time" /></span></p>
+					<br />
+					<p>预约地点:<span class="bottom"><input type="text" name="" id="" value="" /></span></p>
+					<p>预约价格:<span class="bottom"><input type="text" name="price" id="" value="123" disabled="disabled"/></span>&nbsp;/ 元</p>
+					<button onclick="location='yysecond.html'">立即预约</button>
+				</div>
+			</div>
+		</div>
+			<!--footer开始-->
+			<div class="footerWraper">
+				<div class="footer main">
+					<p>Copyright©2017 NewWeber </p>
+					<p>Designed By LiAng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made By ZhangYu/ZhuLonghao /ShanShan</p>
+				</div>
+			</div>
+			<!--footer结束-->		
+	</body>
+	<script type="text/javascript">
+		//banner收缩控制
+		$(document).ready(function() {
+			//手机菜单栏控制
+			var isHidden = true;
+			$(".toggle").click(function() {
+				$("#menu").slideToggle("slow");
+				isHidden = !isHidden;
+				var classNode = $(this).children();
+				classNode.removeClass();
+				if(isHidden) {
+					classNode.addClass("fa fa-angle-down");
+				} else {
+					classNode.addClass("fa fa-angle-up");
+				}
+			});
+		})
+	</script>	
+</html>

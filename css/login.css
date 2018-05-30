@@ -1,0 +1,144 @@
+body,
+html {
+	background-color: #0d0f2c;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	padding-top: 100px;
+}
+
+.windowwraper {
+	margin: 0 auto;
+	width: 500px;
+	background-color: #26284c;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.windowMenubar {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 50px 0;
+}
+
+.windowMenubar a {
+	font-size: 18px;
+	color: white;
+	padding-bottom: 5px;
+}
+
+.windowMenubar .aOnchose {
+	border-bottom: 2px solid white;
+}
+
+.input-text {
+	margin: 0 auto;
+	display: block;
+	border: none;
+	width: 80%;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 30px;
+	border-radius: 6px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	background-color: #161943;
+	font-size: 16px;
+	color: white;
+}
+
+.radiogroup {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	width: 80%;
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+	font-size: 18px;
+	color: white;
+}
+
+input[type=submit] {
+	border: none;
+	display: block;
+	width: 50%;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #2faf89;
+	margin: 30px auto;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+
+input[type=radio] {
+	opacity: 0;
+}
+
+input[type=submit]:hover {
+	background-color: #16a87d;
+}
+
+.radiogroup {
+	margin: 0 auto;
+	display: flex;
+	width: 80%;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 30px;
+	box-sizing: border-box;
+	background-color: #161943;
+	font-size: 16px;
+	color: white;
+	justify-content: space-around;
+	border-radius: 6px;
+}
+
+.login .otherway {
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	text-align: center;
+	font-size: 16px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+.login .otherway a {
+	font-size: 24px;
+	line-height: 80px;
+}
+
+.register {
+	display: none;
+}
+
+.footerWraper {
+	position: static;
+}
+
+@media screen and (max-width: 768px) {
+	.windowwraper {
+		width: 100%;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	.container {
+		padding-top: 60px;
+	}
+	.footerWraper {
+		position: static;
+	}
+}
+@media  screen and (min-height: 860px) and (min-width: 768px) {
+	.footerWraper{
+		position: absolute;
+		bottom: 0;
+	}
+}
